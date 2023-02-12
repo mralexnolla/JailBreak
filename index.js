@@ -41,12 +41,14 @@ const shuffleword = (word) => {
     timeleft--;
     if(timeleft === 1){
     //console.log(`You have ${timeleft} second left`);
+    timerDisplay.textContent = `Time left: ${timeleft}`;
     }
     else if(timeleft === 0){
       clearInterval(timer)
       //console.log(`You have times Up`);
     }else{
       //console.log(`You have ${timeleft} seconds left`);
+      timerDisplay.textContent = `Time left: ${timeleft}`;
     }
   }, 1000);
 
