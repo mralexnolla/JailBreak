@@ -72,7 +72,7 @@ submitButton.addEventListener('click', function(){
             submitButton.setAttribute('disabled', 'disabled');
             clearInterval(timer)
         }else{
-            messageDisplay.textContent = `Incorect. Try again`;
+            messageDisplay.textContent = `Incorrect. Try again`;
         }
 
     }
