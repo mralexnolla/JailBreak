@@ -27,7 +27,7 @@ body{
     text-align: end;
     color: white;
     margin-top: 5rem;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
     padding: 10px 3rem;
     background-color: #a1858500;s;
@@ -88,7 +88,7 @@ body{
     font-size: 4rem;
     color: #ffe7fc;
     /* height: 4.5rem; */
-    background-color: #00000075;
+    background-color: #0000000c;
     width: 60%;
     margin: 2rem auto
 }
