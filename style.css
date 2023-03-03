@@ -42,9 +42,22 @@ body{
     margin-top: 21rem;
     font-size: 7rem;
     font-family: 'Le Cirque', sans-serif;
+    animation: glow 3s infinite alternate;
                                                 
                                                 
 }
+
+@keyframes glow {
+    0% {
+      text-shadow: 0 0 10px blue, 0 0 20px blue, 0 0 30px blue, 0 0 40px blue, 0 0 70px blue, 0 0 80px blue, 0 0 100px white, 0 0 150px white;
+    }
+    50% {
+      text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px white, 0 0 150px white;
+    }
+    100% {
+      text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 70px white, 0 0 80px white, 0 0 100px blue, 0 0 150px blue;
+    }
+  }
 
 
 .input__field > input[type='text'] {
