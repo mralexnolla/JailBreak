@@ -46,12 +46,15 @@ const shuffleword = (word) => {
   const timerDisplay = document.getElementById('timerDisplay');
   const messageDisplay = document.getElementById('messageDisplay');
 
+  let isAlive = false
+
   //timer
 
   if(!timer){
     timer = setInterval(() => {
       timeleft--;
       if(timeleft === 0){
+        submitButton.style.display = "none";
         clearInterval(timer)
       //console.log(`You have ${timeleft} second left`);
         timerDisplay.textContent = `Time left: ${timeleft}`;
@@ -69,10 +72,13 @@ const shuffleword = (word) => {
   }
 
   
+  
 
  
 submitButton.addEventListener('click', function(){
+  
     if(numberoftries === 0){
+        
         return;
     }
 
@@ -88,12 +94,13 @@ submitButton.addEventListener('click', function(){
         numberoftries--;
         trialsLeftDisplay.textContent = `Trials left: ${numberoftries}`;
         if(numberoftries === 0){
+           submitButton.style.display = "none";
             messageDisplay.textContent = `You lost! the word is ${randomWord}`;
             inputField.setAttribute('disabled', 'disabled');
 
-            submitButton.addEventListener('click',()=>{
-              location.reload()
-            })
+            // submitButton.addEventListener('click',()=>{
+            //   location.reload()
+            // })
             clearInterval(timer)
         }else{
             messageDisplay.textContent = `Incorrect. Try again`;
